@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I LoveYou</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .heart {
+            position: fixed;
+            color: rgba(255, 0, 0, 0.8);
+            font-size: 2rem;
+            pointer-events: none;
+            animation: float 1s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>I Love You😘💖🫶</h1>
+    <p>
+    Heyy,maaf ganggu waktu kamu, ada satu hal yang aku mau jelasin ke kamu,i have a crush on you, kalokamu tanya kenapa?aku juga bingung ngejelasin tentang rasa ini ke kmu,perasaan ini tiba tiba datang ke aku dan bagi aku kamu sempurna dan spesial di mata aku.iya,i like you, do u love me?aku ga maksa kamu suka balik.tapi kamu kayak nya gasuka sama aku ya? it's okee, mencintai ga harus memiliki kan?aku akan selalu nunggu kamu disini.kalau ada apa aapa kamu boleh banget cerita sama aku, aku selalu siap sedia buat kamu ko!!! ahahaha,segitu aja mungkin dari aku, thanks yaa udah mau baca aku bahagia bangett, sehat selalu ya.
+    </p>
+    <div class="button-container">
+        <button onclick="createHearts()">Love</button>
+    </div>
+
+    <script>
+        function createHearts() {
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
